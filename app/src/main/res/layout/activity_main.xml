@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Button
+        android:id="@+id/btnDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Detalles De Pokemon (BULBASAUR)"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        android:backgroundTint="@color/black"/>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarPokemon"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Lista de Pokemones"
+        android:background="@color/black"
+        app:titleTextColor="@color/white"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerPokemon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarPokemon"
+        tools:layout_editor_absoluteX="-25dp"
+        tools:listitem="@layout/item_pokemon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</ScrollView>
